@@ -16,15 +16,15 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Poetry
+      - name: Install tooling
         run: |
           python -mpip install poetry codecov
       - name: Install dependencies
         run: |
           poetry install
-      - name: Lint with pylint
+      - name: Lint with flake
         run: |
-          poetry run pylint django_simple_task
+          poetry run flake8 django_simple_task
       - name: Test with pytest
         run: |
           poetry run py.test --cov=./django_simple_task/
