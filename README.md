@@ -3,7 +3,7 @@
 [![Code Coverage](https://codecov.io/gh/ericls/django-simple-task/branch/master/graph/badge.svg)](https://codecov.io/gh/ericls/django-simple-task)
 [![Python Version](https://img.shields.io/pypi/pyversions/django-simple-task.svg)](https://pypi.org/project/django-simple-task/)
 [![PyPI Package](https://img.shields.io/pypi/v/django-simple-task.svg)](https://pypi.org/project/django-simple-task/)
-[![License](https://img.shields.io/pypi/l/django-simple-task.svg)](https://github.com/ericls/django-simple-task/blob/master/LICENSE.md)
+[![License](https://img.shields.io/pypi/l/django-simple-task.svg)](https://github.com/ericls/django-simple-task/blob/master/LICENSE)
 
 `django-simple-task` runs background tasks in Django 3 without requiring other services and workers. It runs them in the same event loop as your ASGI application. It is not resilient as a proper task runner such as Celery, but works for some simple tasks and has less overall overheads.
 
