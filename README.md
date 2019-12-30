@@ -1,5 +1,6 @@
 # Django Simple Task
 [![Github Actions](https://github.com/ericls/django-simple-task/workflows/Build/badge.svg)](https://github.com/ericls/django-simple-task/actions)
+[![Documentation Status](https://readthedocs.org/projects/django-simple-task/badge/?version=latest)](https://django-simple-task.readthedocs.io/?badge=latest)
 [![Code Coverage](https://codecov.io/gh/ericls/django-simple-task/branch/master/graph/badge.svg)](https://codecov.io/gh/ericls/django-simple-task)
 [![Python Version](https://img.shields.io/pypi/pyversions/django-simple-task.svg)](https://pypi.org/project/django-simple-task/)
 [![PyPI Package](https://img.shields.io/pypi/v/django-simple-task.svg)](https://pypi.org/project/django-simple-task/)
