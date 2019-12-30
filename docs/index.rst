@@ -3,18 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Django Simple Task's documentation!
+
+.. mdinclude:: ../README.md
+
+Table of Content
 ==============================================
 
 .. toctree::
+   :hidden:
+
+   self
+
+.. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
+   how-it-works.md
+   api/modules.md
+   
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
