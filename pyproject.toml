@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-simple-task"
-version = "0.1.1"
+version = "0.1.2"
 description = "Task runner for Django 3 without requiring other services"
 readme = "README.md"
 authors = ["Shen Li <dustet@gmail.com>"]

@@ -1,17 +1,31 @@
 from asyncio import create_task, get_running_loop, Queue
+from asgiref.compatibility import guarantee_single_callable
 
 from django.conf import settings
 
 
-def django_simple_task_middlware(app):
+def asgi3_to_asgi2(app):
+    def _wrapped_as_asgi2(scope):
+        async def _inner(receive, send):
+            return await app(scope, receive, send)
+
+        return _inner
+
+    _wrapped_as_asgi2._asgi_double_callable = True
+    return _wrapped_as_asgi2
+
+
+def django_simple_task_middlware(app, *, asgi_version=3):
     from django.apps import apps
     from django_simple_task.worker import worker
+
+    assert asgi_version in (2, 3), "Invalid asgi version"
 
     async def lifespan_handler(scope, receive, send):
         if scope["type"] == "lifespan":
             app_config = apps.get_app_config("django_simple_task")
             app_config.loop = get_running_loop()
-            queue = app_config.queue = Queue(loop=app_config.loop)
+            queue = app_config.queue = Queue()
             while True:
                 message = await receive()
                 if message["type"] == "lifespan.startup":
@@ -29,6 +43,8 @@ def django_simple_task_middlware(app):
                     await send({"type": "lifespan.shutdown.complete"})
                     break
         else:
-            return await app(scope, receive, send)
+            return await guarantee_single_callable(app)(scope, receive, send)
 
+    if asgi_version == 2:
+        return asgi3_to_asgi2(lifespan_handler)
     return lifespan_handler
