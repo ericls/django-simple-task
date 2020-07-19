@@ -25,4 +25,4 @@ def defer(
     if loop:
         loop.call_soon_threadsafe(queue.put_nowait, (func, arguments, options))
     else:
-        warnings.warn("No event loop found. Probably didn't receive ASGI lifespan events.")
+        warnings.warn("No event loop found. Probably didn't receive ASGI lifespan events.")  # pragma: no cover
