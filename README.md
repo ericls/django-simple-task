@@ -8,6 +8,9 @@
 
 `django-simple-task` runs background tasks in Django 3 without requiring other services and workers. It runs them in the same event loop as your ASGI application. It is not resilient as a proper task runner such as Celery, but works for some simple tasks and has less overall overheads.
 
+## Requirements
+`django-simple-task` expect ASGI lifespan protocol to be supported by the server. Currently Daphne does not support this.
+
 ## Guide
 
 Install the package:

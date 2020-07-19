@@ -1,3 +1,4 @@
+import warnings
 from asyncio import Queue
 from typing import Any, Awaitable, Callable, Dict, Optional, Union
 
@@ -23,3 +24,5 @@ def defer(
     loop = app_config.loop
     if loop:
         loop.call_soon_threadsafe(queue.put_nowait, (func, arguments, options))
+    else:
+        warnings.warn("No event loop found. Probably didn't receive ASGI lifespan events.")
