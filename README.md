@@ -11,7 +11,7 @@
 ## Requirements
 `django-simple-task` expect ASGI lifespan protocol to be supported by the server. Currently Daphne does not support this.
 
-This package is tested with Python 3.7 and 3.8.
+This package is tested with Python 3.7, 3.8 and 3.9, Django 3.0 and 3.1.
 
 ## Guide
 
