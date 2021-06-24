@@ -2,7 +2,7 @@
 [![Github Actions](https://github.com/ericls/django-simple-task/workflows/Build/badge.svg)](https://github.com/ericls/django-simple-task/actions)
 [![Documentation Status](https://readthedocs.org/projects/django-simple-task/badge/?version=latest)](https://django-simple-task.readthedocs.io/?badge=latest)
 [![Code Coverage](https://codecov.io/gh/ericls/django-simple-task/branch/master/graph/badge.svg)](https://codecov.io/gh/ericls/django-simple-task)
-[![Python Version](https://img.shields.io/pypi/pyversions/django-simple-task.svg)](https://pypi.org/project/django-simple-task/)
+[![Python Version](https://img.shields.io/badge/Python-3.7%20|%203.8|%203.9-%231081c1)](https://pypi.org/project/django-simple-task/)
 [![PyPI Package](https://img.shields.io/pypi/v/django-simple-task.svg)](https://pypi.org/project/django-simple-task/)
 [![License](https://img.shields.io/pypi/l/django-simple-task.svg)](https://github.com/ericls/django-simple-task/blob/master/LICENSE)
 
@@ -13,7 +13,7 @@
 
 This package is tested with:
  - Python 3.7, 3.8 and 3.9,
- - Django 3.0 and 3.1.
+ - Django 3.1 and 3.2.
 
 ## Guide
 
