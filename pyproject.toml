@@ -14,7 +14,7 @@ asgiref = "^3.2.3"
 [tool.poetry.dev-dependencies]
 django = "^3.0.0"
 pytest = "^5.2"
-ipython = "^7.11.0"
+ipython = "^7.31.1"
 ipdb = "^0.12.3"
 black = {version = "^19.10b0", allow-prereleases = true}
 async-asgi-testclient = "^1.2.2"
